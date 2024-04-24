@@ -1,0 +1,15 @@
+<div class="card mt-5">
+    <div class="card-header">
+        Trikampio ploto skaičiuoklė
+    </div>
+    <div class="card-body">
+        Įveskite X kraštinės reikšmę:
+        <input class="form-control mb-3" type="number" name="x" [(ngModel)]="x"><br>
+        Įveskite Y kraštinės reikšmę:
+        <input class="form-control mb-3" type="number" name="y" [(ngModel)]="y"><br>
+        Įveskite C kraštinės reikšmę:
+        <input class="form-control mb-3" type="number" name="c" [(ngModel)]="c"><br>
+        <button class="btn btn-primary" (click)="suskaiciuok()" [disabled]="x==null || y==null || c==null">Suskaičiuoti</button><br>
+        <div class="alert alert-info mt-3" *ngIf="suma!==null">Plotas {{suma.toFixed(2)}}cm<sup>2</sup></div>
+    </div>
+</div>
